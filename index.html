@@ -29,7 +29,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .btn-wa-send{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:linear-gradient(135deg,#25D366,#1da851);color:#fff;font-weight:700;font-size:13px;padding:14px;border-radius:50px;border:none;cursor:pointer;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;margin-top:8px;box-shadow:0 4px 20px rgba(37,211,102,0.4)}
 .btn-wa-send:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(37,211,102,0.5)}
 .navbar{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:100;width:calc(100% - 36px);max-width:1200px;background:transparent;border:none;padding:0px 40px 10px 20px;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s}
-.navbar.scrolled{background:rgba(8,8,8,0.92);border:1px solid rgba(244,180,0,0.12);border-radius:18px;box-shadow:0 6px 30px rgba(0,0,0,0.5)}
+
 .nav-logo img{height:260px;width:auto;object-fit:contain;display:block;}
 .nav-btn{background:linear-gradient(135deg,var(--y),#e8a800);color:#111;padding:9px 22px;border-radius:50px;font-weight:700;font-size:11px;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;animation:pulseBtnNav 3s ease-in-out infinite;transition:all 0.3s}
 .nav-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 32px rgba(244,180,0,0.6)}
@@ -429,7 +429,7 @@ document.addEventListener('click',function(e){var t=e.target;if(t.classList.cont
 var revs=document.querySelectorAll('.reveal');
 var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
 revs.forEach(function(r){obs.observe(r);});
-window.addEventListener('scroll',function(){var n=document.getElementById('navbar');if(window.scrollY>60){n.classList.add('scrolled');}else{n.classList.remove('scrolled');}});
+window.addEventListener('scroll',function(){var n=document.getElementById('navbar');});
 var cp='bingo';
 function openModal(rol,plataforma){cp=plataforma;['f-nombre','f-ciudad','f-tel','f-email','f-cedula'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('f-rol').value=rol;document.getElementById('modal-title').textContent=plataforma==='bingo'?'SOLICITUD — BINGO':'SOLICITUD — ECUABET';document.getElementById('modal-sub').textContent=plataforma==='bingo'?'Completa tus datos. Te contactamos por WhatsApp de inmediato.':'Completa tus datos para unirte a EcuaBet — Benderam.';document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';}
 function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
