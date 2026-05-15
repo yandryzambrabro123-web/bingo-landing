@@ -15,8 +15,6 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 #particles{position:fixed;inset:0;z-index:0;pointer-events:none}
 .star-container{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 @keyframes starFloat{0%{transform:translateY(100vh) scale(0) rotate(0deg);opacity:0}15%{opacity:0.8}85%{opacity:0.6}100%{transform:translateY(-60px) scale(0) rotate(360deg);opacity:0}}
-
-/* MODALES */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:2000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(12px)}
 .modal-overlay.open{display:flex}
 .modal-box{background:linear-gradient(135deg,#111,#181818);border:1px solid rgba(244,180,0,0.4);border-radius:24px;padding:36px;max-width:460px;width:100%;position:relative;max-height:90vh;overflow-y:auto;box-shadow:0 0 80px rgba(244,180,0,0.15)}
@@ -29,15 +27,11 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .form-field input{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:11px 14px;color:#fff;font-size:13px;font-family:'Inter',sans-serif;outline:none;transition:all 0.3s}
 .form-field input:focus{border-color:rgba(244,180,0,0.5);background:rgba(244,180,0,0.04);box-shadow:0 0 0 3px rgba(244,180,0,0.08)}
 .btn-wa-send{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:linear-gradient(135deg,#25D366,#1da851);color:#fff;font-weight:700;font-size:13px;padding:14px;border-radius:50px;border:none;cursor:pointer;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;margin-top:8px;box-shadow:0 4px 20px rgba(37,211,102,0.4)}
-.btn-wa-send:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(37,211,102,0.5)}
-
-/* NAVBAR */
+.btn-wa-send:hover{transform:translateY(-2px)}
 .navbar{position:fixed;top:16px;left:40px;z-index:100;display:flex;align-items:center;gap:20px;background:transparent;border:none;padding:0}
 .nav-logo img{height:100px;width:auto;object-fit:contain;display:block}
 .nav-btn{background:rgba(0,0,0,0.85);color:var(--y);padding:10px 22px;border-radius:50px;font-weight:700;font-size:11px;border:1px solid rgba(244,180,0,0.2);cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all 0.3s}
-.nav-btn:hover{background:#000;box-shadow:0 4px 20px rgba(244,180,0,0.3);transform:translateY(-2px)}
-
-/* HERO */
+.nav-btn:hover{background:#000;transform:translateY(-2px)}
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:140px 40px 60px;z-index:2}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#F4B400 0%,#e8a800 40%,#d49800 70%,#c08800 100%)}
 .hero-shimmer{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);animation:hs 4s ease-in-out infinite}
@@ -67,16 +61,12 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .scroll-hint-text{font-size:8px;color:rgba(0,0,0,0.3);font-weight:700;letter-spacing:3px}
 .scroll-arrow{width:18px;height:18px;border-right:2px solid rgba(0,0,0,0.2);border-bottom:2px solid rgba(0,0,0,0.2);transform:rotate(45deg)}
 @keyframes bHint{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-
-/* STATS */
 .stats-bar{background:var(--dark);border-top:1px solid rgba(244,180,0,0.07);border-bottom:1px solid rgba(244,180,0,0.07);padding:16px 40px;position:relative;z-index:2}
 .stats-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap}
 .stat-item{text-align:center;flex:1;padding:0 12px;border-right:1px solid rgba(255,255,255,0.04)}
 .stat-item:last-child{border-right:none}
 .stat-num{font-family:'Space Grotesk',sans-serif;font-size:24px;color:var(--y);font-weight:800}
 .stat-label{font-size:8px;color:#2a2a2a;font-weight:700;letter-spacing:1.5px}
-
-/* HERO INFO */
 .hero-info{background:var(--dark);position:relative;overflow:hidden;padding:60px 0;z-index:2}
 .h2-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(244,180,0,0.05) 0%,transparent 65%);right:-80px;top:50%;transform:translateY(-50%);animation:bH2 7s ease-in-out infinite}
 @keyframes bH2{0%,100%{transform:translateY(-50%) scale(1)}50%{transform:translateY(-50%) scale(1.08)}}
@@ -88,7 +78,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .hero-sub-dark{font-size:14px;color:#555;line-height:1.7;margin-bottom:24px;max-width:420px}
 .hero-bullets{display:flex;flex-direction:column;gap:9px}
 .hero-bullet{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:500;color:#bbb}
-.bullet-dot{width:6px;height:6px;background:var(--y);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px rgba(244,180,0,0.8);animation:dotPulse 2s ease-in-out infinite}
+.bullet-dot{width:6px;height:6px;background:var(--y);border-radius:50%;flex-shrink:0;animation:dotPulse 2s ease-in-out infinite}
 @keyframes dotPulse{0%,100%{box-shadow:0 0 6px rgba(244,180,0,0.8)}50%{box-shadow:0 0 14px rgba(244,180,0,1)}}
 .hero-cards{display:grid;gap:10px}
 .role-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:18px;padding:18px 20px;transition:all 0.4s;position:relative;overflow:hidden;backdrop-filter:blur(10px)}
@@ -99,28 +89,21 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .role-card-pct{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
 .pct-badge{background:rgba(244,180,0,0.07);border:1px solid rgba(244,180,0,0.16);color:var(--y);font-size:10px;font-weight:600;padding:3px 9px;border-radius:50px}
 .btn-role{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--y),#e8a800);color:#111;font-weight:700;font-size:11px;padding:9px 18px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;box-shadow:0 4px 16px rgba(244,180,0,0.28)}
-.btn-role:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 8px 28px rgba(244,180,0,0.5)}
+.btn-role:hover{transform:translateY(-2px) scale(1.02)}
 .btn-role.green{background:linear-gradient(135deg,#25D366,#1da851);color:#fff;box-shadow:0 4px 16px rgba(37,211,102,0.28)}
-.btn-role.green:hover{box-shadow:0 8px 28px rgba(37,211,102,0.5)}
-
-/* SECTIONS */
 .section-wrap{padding:56px 0;position:relative;z-index:2}
 .section-inner{max-width:1200px;margin:0 auto;padding:0 40px}
 .section-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(244,180,0,0.06);border:1px solid rgba(244,180,0,0.11);color:var(--y);font-size:9px;font-weight:700;letter-spacing:2.5px;padding:4px 12px;border-radius:50px;margin-bottom:12px}
 .section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.2vw,40px);line-height:1.08;margin-bottom:12px;font-weight:800;letter-spacing:-0.5px}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-
-/* COMISIONES */
 .comisiones-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .comision-items{display:flex;flex-direction:column;gap:12px}
 .comision-item{display:flex;gap:16px;align-items:flex-start;background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:18px;backdrop-filter:blur(10px);transition:all 0.4s}
 .comision-item:hover{border-color:rgba(244,180,0,0.18);transform:translateX(4px)}
-.comision-pct{font-family:'Space Grotesk',sans-serif;font-size:46px;color:var(--y);line-height:1;min-width:78px;font-weight:800;text-shadow:0 0 24px rgba(244,180,0,0.3)}
+.comision-pct{font-family:'Space Grotesk',sans-serif;font-size:46px;color:var(--y);line-height:1;min-width:78px;font-weight:800}
 .clabel{font-size:9px;letter-spacing:2px;color:rgba(244,180,0,0.65);font-weight:700;margin-bottom:3px}
 .cdesc{font-size:11px;color:#4a4a4a;line-height:1.5}
-
-/* OPERADOR */
 .op-box{background:linear-gradient(135deg,rgba(244,180,0,0.04),rgba(244,180,0,0.01));border:1px solid rgba(244,180,0,0.16);border-radius:20px;padding:32px;position:relative;overflow:hidden;margin-bottom:20px}
 .op-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .req-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
@@ -135,8 +118,6 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .step3:hover{border-top-color:rgba(244,180,0,0.6);transform:translateY(-2px)}
 .step3-title{color:var(--y);font-family:'Space Grotesk',sans-serif;font-size:12px;margin-bottom:6px;font-weight:700}
 .step3-desc{font-size:10px;color:#3a3a3a}
-
-/* BENEFITS */
 .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
 .benefit-col{background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:22px 18px;border-top:2px solid rgba(244,180,0,0.22);backdrop-filter:blur(10px);transition:all 0.4s}
 .benefit-col:hover{border-top-color:rgba(244,180,0,0.6);transform:translateY(-3px)}
@@ -144,8 +125,6 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .benefit-list{display:flex;flex-direction:column;gap:8px}
 .benefit-item{display:flex;align-items:flex-start;gap:7px;font-size:11px;color:#555}
 .benefit-check{color:var(--y);font-size:10px;flex-shrink:0;margin-top:1px}
-
-/* PREMIOS */
 .premios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
 .premio-card{background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:24px;text-align:center;transition:all 0.4s;backdrop-filter:blur(10px)}
 .premio-card:hover{border-color:rgba(244,180,0,0.22);transform:translateY(-5px)}
@@ -154,16 +133,12 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .premio-amount{font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--y);margin-bottom:6px;font-weight:800}
 .premio-title{font-size:12px;font-weight:700;margin-bottom:6px;color:#ccc}
 .premio-desc{font-size:11px;color:#3a3a3a;line-height:1.5}
-
-/* TECH */
 .tech-list{display:flex;flex-direction:column;gap:10px;max-width:660px;margin-top:24px}
 .tech-item{display:flex;gap:14px;align-items:flex-start;background:var(--glass);border:1px solid var(--gb);border-radius:16px;padding:16px;backdrop-filter:blur(10px);transition:all 0.4s}
 .tech-item:hover{border-color:rgba(244,180,0,0.16);transform:translateX(5px)}
 .tech-num{font-family:'Space Grotesk',sans-serif;font-size:26px;color:rgba(244,180,0,0.22);line-height:1;min-width:30px;font-weight:800}
 .tech-info h4{font-weight:700;font-size:12px;margin-bottom:3px;color:var(--y);font-family:'Space Grotesk',sans-serif}
 .tech-info p{font-size:11px;color:#3a3a3a;line-height:1.5}
-
-/* ECUABET */
 .ecuabet-section{padding:56px 0;position:relative;z-index:2;overflow:hidden}
 .ecuabet-inner{max-width:1200px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
 .ecuabet-header{display:flex;align-items:center;gap:24px;margin-bottom:32px;flex-wrap:wrap}
@@ -181,9 +156,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .req-ecuabet-title{font-size:9px;letter-spacing:2px;color:rgba(244,180,0,0.65);font-weight:700;margin-bottom:8px}
 .req-ecuabet-list{display:flex;flex-direction:column;gap:5px}
 .req-ecuabet-item{display:flex;gap:7px;align-items:flex-start;font-size:11px;color:#bbb}
-.req-ecuabet-check{color:var(--y);flex-shrink:0;margin-top:1px}
-
-/* FOOTER */
+.req-ecuabet-check{color:var(--y);flex-shrink:0}
 footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,0,0.05);position:relative;z-index:2}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:28px}
 .footer-brand-logos{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
@@ -196,31 +169,28 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
 .footer-bottom{max-width:1200px;margin:0 auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;font-size:10px;color:#181818;flex-wrap:wrap;gap:8px}
 .social-links{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}
 .social-btn{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);color:#3a3a3a;padding:7px 12px;border-radius:50px;font-size:10px;font-weight:600;text-decoration:none;transition:all 0.3s;font-family:'Space Grotesk',sans-serif}
-.social-btn:hover{background:rgba(244,180,0,0.07);border-color:rgba(244,180,0,0.18);color:var(--y)}
-.social-btn.wa{color:#25D366;border-color:rgba(37,211,102,0.1);background:rgba(37,211,102,0.02)}
+.social-btn:hover{background:rgba(244,180,0,0.07);color:var(--y)}
+.social-btn.wa{color:#25D366;border-color:rgba(37,211,102,0.1)}
 .sparkle{position:fixed;pointer-events:none;z-index:9999;animation:spkl 1.1s ease-in-out forwards}
 @keyframes spkl{0%{transform:scale(0) rotate(0deg);opacity:1}50%{transform:scale(1) rotate(180deg);opacity:0.9}100%{transform:scale(0) rotate(360deg);opacity:0}}
-
 @media(max-width:900px){
-  .navbar{top:12px;left:16px;gap:12px}
-  .nav-logo img{height:60px!important}
-  .hero{padding:100px 20px 56px}
-  .hero-content,.hero-info-inner,.comisiones-grid,.op-grid,.footer-inner{grid-template-columns:1fr}
-  .benefits-grid,.premios-grid,.steps3,.ecuabet-grid{grid-template-columns:1fr}
-  .section-inner,.ecuabet-inner{padding:0 18px}
-  footer{padding:32px 18px 24px}
-  .stats-inner{gap:10px}
-  .stat-item{border-right:none;padding:5px 0}
-  .hero-info{padding:44px 0}
-  .section-wrap{padding:44px 0}
+.navbar{top:12px;left:16px;gap:12px}
+.nav-logo img{height:60px!important}
+.hero{padding:100px 20px 56px}
+.hero-content,.hero-info-inner,.comisiones-grid,.op-grid,.footer-inner{grid-template-columns:1fr}
+.benefits-grid,.premios-grid,.steps3,.ecuabet-grid{grid-template-columns:1fr}
+.section-inner,.ecuabet-inner{padding:0 18px}
+footer{padding:32px 18px 24px}
+.stats-inner{gap:10px}
+.stat-item{border-right:none;padding:5px 0}
+.hero-info{padding:44px 0}
+.section-wrap{padding:44px 0}
 }
 </style>
 </head>
 <body>
 <canvas id="particles"></canvas>
 <div class="star-container" id="stars"></div>
-
-<!-- MODAL PRINCIPAL -->
 <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -235,8 +205,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     <button class="btn-wa-send" onclick="sendWA()">📲 ENVIAR POR WHATSAPP</button>
   </div>
 </div>
-
-<!-- MODAL RECARGA -->
 <div class="modal-overlay" id="modal-recarga" onclick="if(event.target===this)closeRecarga()">
   <div class="modal-box">
     <button class="modal-close" onclick="closeRecarga()">✕</button>
@@ -245,17 +213,13 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     <div class="form-field"><label>Nombre completo *</label><input type="text" id="r-nombre" placeholder="Tu nombre completo"></div>
     <div class="form-field"><label>ID de cuenta EcuaBet *</label><input type="text" id="r-id" placeholder="Tu ID de EcuaBet"></div>
     <div class="form-field"><label>Valor a recargar *</label><input type="number" id="r-valor" placeholder="Ej: 20"></div>
-    <button class="btn-wa-send" onclick="sendRecarga()" style="background:linear-gradient(135deg,#25D366,#1da851)">📲 ENVIAR POR WHATSAPP</button>
+    <button class="btn-wa-send" onclick="sendRecarga()">📲 ENVIAR POR WHATSAPP</button>
   </div>
 </div>
-
-<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-logo"><img src="logo-bingo.png" alt="Bingo"></div>
   <button class="nav-btn" onclick="openModal('Operador de Bingo','bingo')">UNIRME AHORA</button>
 </nav>
-
-<!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-shimmer"></div>
@@ -279,13 +243,12 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
       <a href="https://bingo593.com.ec" target="_blank" class="hero-btn"><span>🎴 &nbsp;Crear cuenta en Bingo</span><span class="arr">↗</span></a>
       <div class="sdiv" style="margin-top:2px"><div class="sdiv-line"></div><div class="sdiv-text">ECUABET</div><div class="sdiv-line"></div></div>
       <a href="https://ecuabet.com/registro/aff/Z2lOeHVTRkhnWTh5QVExQTIrOGU3UT09" target="_blank" class="hero-btn wa-btn"><span>⚽ &nbsp;Crear cuenta en EcuaBet</span><span class="arr">↗</span></a>
-      <button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="hero-btn"><span>📊 <button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="hero-btn"><span>📊 &nbsp;Quiero ser agente de EcuaBet</span><span class="arr">→</span></button><button onclick="openRecarga()" class="hero-btn wa-btn"><span>💳 &nbsp;Quiero hacer una recarga de EcuaBet</span><span class="arr">→</span></button>nbsp;Quiero ser agente de EcuaBet</span><span class="arr">→</span></button><button onclick="openRecarga()" class="hero-btn wa-btn"><span>💳 <button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="hero-btn"><span>📊 &nbsp;Quiero ser agente de EcuaBet</span><span class="arr">→</span></button><button onclick="openRecarga()" class="hero-btn wa-btn"><span>💳 &nbsp;Quiero hacer una recarga de EcuaBet</span><span class="arr">→</span></button>nbsp;Quiero hacer una recarga de EcuaBet</span><span class="arr">→</span></button>
+      <button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="hero-btn"><span>📊 &nbsp;Quiero ser agente de EcuaBet</span><span class="arr">→</span></button>
+      <button onclick="openRecarga()" class="hero-btn wa-btn"><span>💳 &nbsp;Quiero hacer una recarga de EcuaBet</span><span class="arr">→</span></button>
     </div>
   </div>
   <div class="scroll-hint"><span class="scroll-hint-text">DESCUBRE MÁS</span><div class="scroll-arrow"></div></div>
 </section>
-
-<!-- STATS -->
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item"><div class="stat-num">+15.000</div><div class="stat-label">CARTOLAS VENDIDAS</div></div>
@@ -294,8 +257,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     <div class="stat-item"><div class="stat-num">50%</div><div class="stat-label">SE REPARTE EN COMISIONES</div></div>
   </div>
 </div>
-
-<!-- HERO INFO -->
 <section class="hero-info">
   <div class="h2-glow"></div>
   <div class="h2-grid"></div>
@@ -318,8 +279,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     </div>
   </div>
 </section>
-
-<!-- COMISIONES -->
 <div id="comisiones" class="section-wrap">
   <div class="section-inner">
     <div class="comisiones-grid reveal">
@@ -336,8 +295,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     </div>
   </div>
 </div>
-
-<!-- OPERADOR MASTER -->
 <div id="operador" class="section-wrap" style="padding-top:0">
   <div class="section-inner">
     <div class="section-tag reveal">👑 SOLO PARA LÍDERES — CUPOS LIMITADOS</div>
@@ -368,8 +325,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     </div>
   </div>
 </div>
-
-<!-- BENEFICIOS -->
 <div id="beneficios" class="section-wrap" style="padding-top:0">
   <div class="section-inner reveal">
     <div class="section-tag">⚡ VENTAJAS REALES</div>
@@ -381,8 +336,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     </div>
   </div>
 </div>
-
-<!-- PREMIOS -->
 <div id="premios" class="section-wrap" style="padding-top:0">
   <div class="section-inner reveal">
     <div class="section-tag">🏆 PREMIOS SEMANALES</div>
@@ -390,12 +343,10 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     <div class="premios-grid">
       <div class="premio-card"><div class="premio-icon">🏆</div><div class="premio-amount">+$2.000</div><div class="premio-title">GRAN PREMIO SEMANAL</div><div class="premio-desc">Con un combo de $1 (4 cartolas) puedes ganar más de $2.000 USD cada domingo.</div></div>
       <div class="premio-card"><div class="premio-icon">📅</div><div class="premio-amount" style="font-size:26px">CADA DOMINGO</div><div class="premio-title">SORTEO GARANTIZADO</div><div class="premio-desc">La plataforma cubre el 100% de los premios. Sin excusas, sin retrasos.</div></div>
-      <div class="premio-card"><div class="premio-icon">📈</div><div class="premio-amount" style="font-size:26px">SIN TECHO</div><div class="premio-title">MÁS VENTAS = MÁS INGRESOS</div><div class="premio-desc">Tu red trabaja para ti 24/7. Cuanto más vendas, más ganas. Sin límite.</div></div>
+      <div class="premio-card"><div class="premio-icon">📈</div><div class="premio-amount" style="font-size:26px">SIN TECHO</div><div class="premio-title">MÁS VENTAS = MÁS INGRESOS</div><div class="premio-desc">Tu red trabaja para ti 24/7. Sin límite.</div></div>
     </div>
   </div>
 </div>
-
-<!-- TECNOLOGIA -->
 <div class="section-wrap" style="padding-top:0">
   <div class="section-inner reveal">
     <div class="section-tag">⚡ ADRENALINA PURA</div>
@@ -408,8 +359,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     </div>
   </div>
 </div>
-
-<!-- ECUABET -->
 <div id="ecuabet" class="ecuabet-section">
   <div class="ecuabet-inner reveal">
     <div class="ecuabet-header">
@@ -458,8 +407,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     </div>
   </div>
 </div>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -498,7 +445,6 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
     <a href="#" style="color:#181818;text-decoration:none">Términos y condiciones</a>
   </div>
 </footer>
-
 <script>
 var canvas=document.getElementById('particles');
 var ctx=canvas.getContext('2d');
@@ -519,10 +465,10 @@ window.addEventListener('scroll',function(){var n=document.getElementById('navba
 var cp='bingo';
 function openModal(rol,plataforma){cp=plataforma;['f-nombre','f-ciudad','f-tel','f-email','f-cedula'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('f-rol').value=rol;document.getElementById('modal-title').textContent=plataforma==='bingo'?'SOLICITUD — BINGO':'SOLICITUD — ECUABET';document.getElementById('modal-sub').textContent=plataforma==='bingo'?'Completa tus datos. Te contactamos por WhatsApp de inmediato.':'Completa tus datos para unirte a EcuaBet — Benderam.';document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';}
 function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
-function sendWA(){var n=document.getElementById('f-nombre').value.trim();var c=document.getElementById('f-ciudad').value.trim();var t=document.getElementById('f-tel').value.trim();var e=document.getElementById('f-email').value.trim();var ced=document.getElementById('f-cedula').value.trim();var rol=document.getElementById('f-rol').value;if(!n||!c||!t||!e){alert('Por favor completa todos los campos obligatorios.');return;}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){alert('Ingresa un correo válido.');return;}var msg='¡Hola! Quiero solicitar acceso como *'+rol+'*.\n\n👤 *Nombre:* '+n+'\n🏙️ *Ciudad:* '+c+'\n📱 *Teléfono:* '+t+'\n✉️ *Correo:* '+e+'\n'+(ced?'🪪 *Cédula:* '+ced+'\n':'')+'\\nAdjuntaré los documentos requeridos. ¡Quedo a la espera!';var num=cp==='bingo'?'593981849712':'593988096489';window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank');closeModal();}
+function sendWA(){var n=document.getElementById('f-nombre').value.trim();var c=document.getElementById('f-ciudad').value.trim();var t=document.getElementById('f-tel').value.trim();var e=document.getElementById('f-email').value.trim();var ced=document.getElementById('f-cedula').value.trim();var rol=document.getElementById('f-rol').value;if(!n||!c||!t||!e){alert('Por favor completa todos los campos obligatorios.');return;}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){alert('Ingresa un correo válido.');return;}var msg='Hola! Quiero solicitar acceso como *'+rol+'*.\n\n👤 *Nombre:* '+n+'\n🏙️ *Ciudad:* '+c+'\n📱 *Teléfono:* '+t+'\n✉️ *Correo:* '+e+'\n'+(ced?'🪪 *Cédula:* '+ced+'\n':'')+'Adjuntaré los documentos requeridos.';var num=cp==='bingo'?'593981849712':'593988096489';window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank');closeModal();}
 function openRecarga(){['r-nombre','r-id','r-valor'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('modal-recarga').classList.add('open');document.body.style.overflow='hidden';}
 function closeRecarga(){document.getElementById('modal-recarga').classList.remove('open');document.body.style.overflow='';}
-function sendRecarga(){var n=document.getElementById('r-nombre').value.trim();var id=document.getElementById('r-id').value.trim();var v=document.getElementById('r-valor').value.trim();if(!n||!id||!v){alert('Por favor completa todos los campos.');return;}var msg='💳 *RECARGA ECUABET*\n\n👤 *Nombre:* '+n+'\n🆔 *ID EcuaBet:* '+id+'\n💵 *Valor a recargar:* $'+v+'\n\n¡Quedo a la espera de confirmación!';window.open('https://wa.me/593968994305?text='+encodeURIComponent(msg),'_blank');closeRecarga();}
+function sendRecarga(){var n=document.getElementById('r-nombre').value.trim();var id=document.getElementById('r-id').value.trim();var v=document.getElementById('r-valor').value.trim();if(!n||!id||!v){alert('Por favor completa todos los campos.');return;}var msg='💳 *RECARGA ECUABET*\n\n👤 *Nombre:* '+n+'\n🆔 *ID EcuaBet:* '+id+'\n💵 *Valor a recargar:* $'+v+'\n\nQuedo a la espera de confirmación!';window.open('https://wa.me/593968994305?text='+encodeURIComponent(msg),'_blank');closeRecarga();}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeRecarga();}});
 </script>
 </body>
