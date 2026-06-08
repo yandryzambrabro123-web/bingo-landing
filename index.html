@@ -218,17 +218,17 @@ footer{padding:32px 18px 24px}
 </div>
 
 <!-- BANNER MUNDIAL 2026 -->
-<div style="position:relative;z-index:2;padding:0">
-  <div style="position:relative;cursor:pointer" onclick="openMundial()">
-    <img src="banner-mundial.png" alt="Mundial 2026" style="width:100%;display:block">
-    <div style="position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,0.75))"></div>
-    <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);white-space:nowrap">
-      <button onclick="event.stopPropagation();openMundial()" style="background:linear-gradient(135deg,#F4B400,#e8a800);color:#111;font-family:Space Grotesk,sans-serif;font-weight:800;font-size:18px;padding:18px 52px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 8px 40px rgba(244,180,0,0.6)">
+<section style="position:relative;z-index:2;width:100%;overflow:hidden">
+  <div style="position:relative;cursor:pointer;max-height:600px;overflow:hidden" onclick="openMundial()">
+    <img src="banner-mundial.png" alt="Mundial 2026" style="width:100%;display:block;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.2) 0%,transparent 30%,transparent 60%,rgba(0,0,0,0.6) 100%)"></div>
+    <div style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);white-space:nowrap;z-index:3">
+      <button onclick="event.stopPropagation();openMundial()" style="background:linear-gradient(135deg,#F4B400,#e8a800);color:#111;font-family:Space Grotesk,sans-serif;font-weight:800;font-size:16px;padding:16px 48px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 8px 40px rgba(244,180,0,0.6);letter-spacing:0.5px">
         🏆 QUIERO PARTICIPAR
       </button>
     </div>
   </div>
-</div>
+</section>
 <nav class="navbar" id="navbar">
   <div class="nav-logo"><img src="logo-bingo.png" alt="Bingo"></div>
   <button class="nav-btn" onclick="openModal('Operador de Bingo','bingo')">UNIRME AHORA</button>
