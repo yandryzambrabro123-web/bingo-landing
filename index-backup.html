@@ -7,14 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--y:#F4B400;--yl:#FFD54F;--dark:#080808;--glass:rgba(255,255,255,0.03);--gb:rgba(255,255,255,0.06)}
+:root{--y:#F4B400;--dark:#080808;--glass:rgba(255,255,255,0.03);--gb:rgba(255,255,255,0.06)}
 body{font-family:'Inter',sans-serif;background:var(--dark);color:#fff;overflow-x:hidden}
 h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-thumb{background:var(--y);border-radius:2px}
 #particles{position:fixed;inset:0;z-index:0;pointer-events:none}
 .star-container{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-@keyframes starFloat{0%{transform:translateY(100vh) scale(0) rotate(0deg);opacity:0}15%{opacity:0.8;transform:translateY(80vh) scale(1) rotate(45deg)}85%{opacity:0.6}100%{transform:translateY(-60px) scale(0) rotate(360deg);opacity:0}}
+@keyframes starFloat{0%{transform:translateY(100vh) scale(0) rotate(0deg);opacity:0}15%{opacity:0.8}85%{opacity:0.6}100%{transform:translateY(-60px) scale(0) rotate(360deg);opacity:0}}
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:2000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(12px)}
 .modal-overlay.open{display:flex}
 .modal-box{background:linear-gradient(135deg,#111,#181818);border:1px solid rgba(244,180,0,0.4);border-radius:24px;padding:36px;max-width:460px;width:100%;position:relative;max-height:90vh;overflow-y:auto;box-shadow:0 0 80px rgba(244,180,0,0.15)}
@@ -27,15 +27,13 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .form-field input{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:11px 14px;color:#fff;font-size:13px;font-family:'Inter',sans-serif;outline:none;transition:all 0.3s}
 .form-field input:focus{border-color:rgba(244,180,0,0.5);background:rgba(244,180,0,0.04);box-shadow:0 0 0 3px rgba(244,180,0,0.08)}
 .btn-wa-send{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:linear-gradient(135deg,#25D366,#1da851);color:#fff;font-weight:700;font-size:13px;padding:14px;border-radius:50px;border:none;cursor:pointer;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;margin-top:8px;box-shadow:0 4px 20px rgba(37,211,102,0.4)}
-.btn-wa-send:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(37,211,102,0.5)}
-.navbar{position:fixed;top:16px;left:40px;z-index:100;width:auto;background:rgba(8,8,8,0.85);;border-radius:0;padding:8px 24px;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s}
-
-.nav-logo img{height:100px;width:auto;object-fit:contain;display:block;}
-.nav-btn{background:rgba(0,0,0,0.88);color:var(--y);padding:9px 22px;border-radius:50px;font-weight:700;font-size:11px;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;animation:pulseBtnNav 3s ease-in-out infinite;transition:all 0.3s}
-.nav-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 32px rgba(244,180,0,0.6)}
-@keyframes pulseBtnNav{0%,100%{box-shadow:0 4px 16px rgba(244,180,0,0.4),0 0 0 0 rgba(244,180,0,0.3)}50%{box-shadow:0 4px 16px rgba(244,180,0,0.4),0 0 0 7px rgba(244,180,0,0)}}
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:120px 40px 60px;z-index:2}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#F4B400 0%,#e8a800 40%,#d49800 70%,#c08800 100%);top:0!important}
+.btn-wa-send:hover{transform:translateY(-2px)}
+.navbar{position:fixed;top:16px;left:40px;z-index:100;display:flex;align-items:center;gap:20px;background:transparent;border:none;padding:0}
+.nav-logo img{height:100px;width:auto;object-fit:contain;display:block}
+.nav-btn{background:rgba(0,0,0,0.85);color:var(--y);padding:10px 22px;border-radius:50px;font-weight:700;font-size:11px;border:1px solid rgba(244,180,0,0.2);cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all 0.3s}
+.nav-btn:hover{background:#000;transform:translateY(-2px)}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:140px 40px 60px;z-index:2}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#F4B400 0%,#e8a800 40%,#d49800 70%,#c08800 100%)}
 .hero-shimmer{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);animation:hs 4s ease-in-out infinite}
 @keyframes hs{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 .hero-radial{position:absolute;inset:0;background:radial-gradient(ellipse at 12% 50%,rgba(255,255,255,0.14) 0%,transparent 50%)}
@@ -55,9 +53,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .sdiv-line{flex:1;height:1px;background:rgba(0,0,0,0.1)}
 .sdiv-text{font-size:9px;color:rgba(0,0,0,0.32);font-weight:700;letter-spacing:2px;white-space:nowrap}
 .hero-btn{display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,0.88);color:var(--y);padding:16px 24px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;border:none;cursor:pointer;transition:all 0.35s;font-family:'Space Grotesk',sans-serif;width:100%;position:relative;overflow:hidden}
-.hero-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(244,180,0,0.05),transparent);transform:translateX(-100%);transition:transform 0.5s}
-.hero-btn:hover::after{transform:translateX(100%)}
-.hero-btn:hover{background:#000;transform:translateX(5px);box-shadow:0 8px 28px rgba(0,0,0,0.5),inset 0 0 0 1px rgba(244,180,0,0.2)}
+.hero-btn:hover{background:#000;transform:translateX(5px);box-shadow:0 8px 28px rgba(0,0,0,0.5)}
 .hero-btn .arr{font-size:17px;opacity:0.35;transition:all 0.3s;flex-shrink:0}
 .hero-btn:hover .arr{opacity:1;transform:translateX(4px)}
 .hero-btn.wa-btn{color:#25D366}
@@ -69,7 +65,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .stats-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap}
 .stat-item{text-align:center;flex:1;padding:0 12px;border-right:1px solid rgba(255,255,255,0.04)}
 .stat-item:last-child{border-right:none}
-.stat-num{font-family:'Space Grotesk',sans-serif;font-size:24px;color:var(--y);font-weight:800;text-shadow:0 0 20px rgba(244,180,0,0.3)}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:24px;color:var(--y);font-weight:800}
 .stat-label{font-size:8px;color:#2a2a2a;font-weight:700;letter-spacing:1.5px}
 .hero-info{background:var(--dark);position:relative;overflow:hidden;padding:60px 0;z-index:2}
 .h2-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(244,180,0,0.05) 0%,transparent 65%);right:-80px;top:50%;transform:translateY(-50%);animation:bH2 7s ease-in-out infinite}
@@ -82,20 +78,19 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .hero-sub-dark{font-size:14px;color:#555;line-height:1.7;margin-bottom:24px;max-width:420px}
 .hero-bullets{display:flex;flex-direction:column;gap:9px}
 .hero-bullet{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:500;color:#bbb}
-.bullet-dot{width:6px;height:6px;background:var(--y);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px rgba(244,180,0,0.8);animation:dotPulse 2s ease-in-out infinite}
-@keyframes dotPulse{0%,100%{box-shadow:0 0 6px rgba(244,180,0,0.8)}50%{box-shadow:0 0 14px rgba(244,180,0,1),0 0 26px rgba(244,180,0,0.4)}}
+.bullet-dot{width:6px;height:6px;background:var(--y);border-radius:50%;flex-shrink:0;animation:dotPulse 2s ease-in-out infinite}
+@keyframes dotPulse{0%,100%{box-shadow:0 0 6px rgba(244,180,0,0.8)}50%{box-shadow:0 0 14px rgba(244,180,0,1)}}
 .hero-cards{display:grid;gap:10px}
 .role-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:18px;padding:18px 20px;transition:all 0.4s;position:relative;overflow:hidden;backdrop-filter:blur(10px)}
 .role-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--y),rgba(244,180,0,0.08))}
-.role-card:hover{border-color:rgba(244,180,0,0.22);transform:translateX(5px);box-shadow:0 10px 36px rgba(0,0,0,0.4)}
+.role-card:hover{border-color:rgba(244,180,0,0.22);transform:translateX(5px)}
 .role-card-title{font-family:'Space Grotesk',sans-serif;font-size:15px;color:var(--y);margin-bottom:4px;font-weight:700}
 .role-card-desc{font-size:11px;color:#4a4a4a;margin-bottom:9px;line-height:1.5}
 .role-card-pct{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
 .pct-badge{background:rgba(244,180,0,0.07);border:1px solid rgba(244,180,0,0.16);color:var(--y);font-size:10px;font-weight:600;padding:3px 9px;border-radius:50px}
 .btn-role{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--y),#e8a800);color:#111;font-weight:700;font-size:11px;padding:9px 18px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;box-shadow:0 4px 16px rgba(244,180,0,0.28)}
-.btn-role:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 8px 28px rgba(244,180,0,0.5)}
+.btn-role:hover{transform:translateY(-2px) scale(1.02)}
 .btn-role.green{background:linear-gradient(135deg,#25D366,#1da851);color:#fff;box-shadow:0 4px 16px rgba(37,211,102,0.28)}
-.btn-role.green:hover{box-shadow:0 8px 28px rgba(37,211,102,0.5)}
 .section-wrap{padding:56px 0;position:relative;z-index:2}
 .section-inner{max-width:1200px;margin:0 auto;padding:0 40px}
 .section-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(244,180,0,0.06);border:1px solid rgba(244,180,0,0.11);color:var(--y);font-size:9px;font-weight:700;letter-spacing:2.5px;padding:4px 12px;border-radius:50px;margin-bottom:12px}
@@ -106,15 +101,14 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .comision-items{display:flex;flex-direction:column;gap:12px}
 .comision-item{display:flex;gap:16px;align-items:flex-start;background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:18px;backdrop-filter:blur(10px);transition:all 0.4s}
 .comision-item:hover{border-color:rgba(244,180,0,0.18);transform:translateX(4px)}
-.comision-pct{font-family:'Space Grotesk',sans-serif;font-size:46px;color:var(--y);line-height:1;min-width:78px;font-weight:800;text-shadow:0 0 24px rgba(244,180,0,0.3)}
+.comision-pct{font-family:'Space Grotesk',sans-serif;font-size:46px;color:var(--y);line-height:1;min-width:78px;font-weight:800}
 .clabel{font-size:9px;letter-spacing:2px;color:rgba(244,180,0,0.65);font-weight:700;margin-bottom:3px}
 .cdesc{font-size:11px;color:#4a4a4a;line-height:1.5}
 .op-box{background:linear-gradient(135deg,rgba(244,180,0,0.04),rgba(244,180,0,0.01));border:1px solid rgba(244,180,0,0.16);border-radius:20px;padding:32px;position:relative;overflow:hidden;margin-bottom:20px}
-.op-box::after{content:'MASTER';position:absolute;right:-10px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:'Space Grotesk',sans-serif;font-size:72px;color:rgba(244,180,0,0.03);white-space:nowrap;pointer-events:none;font-weight:800}
 .op-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .req-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .req-item{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:500;color:#bbb}
-.req-dot{width:5px;height:5px;background:var(--y);border-radius:50%;flex-shrink:0;box-shadow:0 0 6px rgba(244,180,0,0.8)}
+.req-dot{width:5px;height:5px;background:var(--y);border-radius:50%;flex-shrink:0}
 .meta-box{background:rgba(0,0,0,0.4);border-left:3px solid var(--y);padding:14px 18px;border-radius:0 10px 10px 0;margin-bottom:12px}
 .meta-label{font-size:8px;letter-spacing:2px;color:rgba(244,180,0,0.65);font-weight:700;margin-bottom:3px}
 .meta-val{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700}
@@ -125,18 +119,18 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .step3-title{color:var(--y);font-family:'Space Grotesk',sans-serif;font-size:12px;margin-bottom:6px;font-weight:700}
 .step3-desc{font-size:10px;color:#3a3a3a}
 .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
-.benefit-col{background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:22px 18px;border-top:2px solid rgba(244,180,0,0.22);backdrop-filter:blur(10px);transition:all 0.4f}
-.benefit-col:hover{border-top-color:rgba(244,180,0,0.6);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,0.3)}
+.benefit-col{background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:22px 18px;border-top:2px solid rgba(244,180,0,0.22);backdrop-filter:blur(10px);transition:all 0.4s}
+.benefit-col:hover{border-top-color:rgba(244,180,0,0.6);transform:translateY(-3px)}
 .benefit-col-title{font-family:'Space Grotesk',sans-serif;font-size:14px;color:var(--y);margin-bottom:14px;font-weight:700}
 .benefit-list{display:flex;flex-direction:column;gap:8px}
 .benefit-item{display:flex;align-items:flex-start;gap:7px;font-size:11px;color:#555}
 .benefit-check{color:var(--y);font-size:10px;flex-shrink:0;margin-top:1px}
 .premios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
 .premio-card{background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:24px;text-align:center;transition:all 0.4s;backdrop-filter:blur(10px)}
-.premio-card:hover{border-color:rgba(244,180,0,0.22);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
+.premio-card:hover{border-color:rgba(244,180,0,0.22);transform:translateY(-5px)}
 .premio-icon{font-size:36px;margin-bottom:12px;animation:iFloat 4s ease-in-out infinite}
 @keyframes iFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.premio-amount{font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--y);margin-bottom:6px;font-weight:800;text-shadow:0 0 24px rgba(244,180,0,0.3)}
+.premio-amount{font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--y);margin-bottom:6px;font-weight:800}
 .premio-title{font-size:12px;font-weight:700;margin-bottom:6px;color:#ccc}
 .premio-desc{font-size:11px;color:#3a3a3a;line-height:1.5}
 .tech-list{display:flex;flex-direction:column;gap:10px;max-width:660px;margin-top:24px}
@@ -146,20 +140,23 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .tech-info h4{font-weight:700;font-size:12px;margin-bottom:3px;color:var(--y);font-family:'Space Grotesk',sans-serif}
 .tech-info p{font-size:11px;color:#3a3a3a;line-height:1.5}
 .ecuabet-section{padding:56px 0;position:relative;z-index:2;overflow:hidden}
-.ecuabet-section::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(244,180,0,0.04) 0%,transparent 70%);left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;animation:bE 8s ease-in-out infinite}
-@keyframes bE{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12)}}
 .ecuabet-inner{max-width:1200px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
 .ecuabet-header{display:flex;align-items:center;gap:24px;margin-bottom:32px;flex-wrap:wrap}
 .ecuabet-header-logos{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.ecuabet-header-logos img{height:100px;width:auto;object-fit:contain;display:block}
+.ecuabet-header-logos img{height:60px;width:auto;object-fit:contain;display:block}
 .ecuabet-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:28px}
 .ecuabet-card{background:var(--glass);border:1px solid var(--gb);border-radius:18px;padding:24px;text-align:center;transition:all 0.4s;backdrop-filter:blur(10px)}
-.ecuabet-card:hover{border-color:rgba(244,180,0,0.22);transform:translateY(-4px);box-shadow:0 16px 44px rgba(0,0,0,0.4)}
+.ecuabet-card:hover{border-color:rgba(244,180,0,0.22);transform:translateY(-4px)}
 .ecuabet-icon{font-size:30px;margin-bottom:10px}
 .ecuabet-role{font-family:'Space Grotesk',sans-serif;font-size:17px;color:var(--y);margin-bottom:6px;font-weight:700}
 .ecuabet-desc{font-size:11px;color:#4a4a4a;line-height:1.5;margin-bottom:10px}
-.ecuabet-pcts{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.ecuabet-pcts{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
 .ecuabet-pct-item{background:rgba(244,180,0,0.04);border:1px solid rgba(244,180,0,0.1);border-radius:50px;padding:5px 10px;font-size:10px;font-weight:600;color:var(--y)}
+.req-ecuabet{text-align:left;margin-bottom:16px}
+.req-ecuabet-title{font-size:9px;letter-spacing:2px;color:rgba(244,180,0,0.65);font-weight:700;margin-bottom:8px}
+.req-ecuabet-list{display:flex;flex-direction:column;gap:5px}
+.req-ecuabet-item{display:flex;gap:7px;align-items:flex-start;font-size:11px;color:#bbb}
+.req-ecuabet-check{color:var(--y);flex-shrink:0}
 footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,0,0.05);position:relative;z-index:2}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:28px}
 .footer-brand-logos{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
@@ -172,13 +169,13 @@ footer{background:#000;padding:40px 40px 28px;border-top:1px solid rgba(244,180,
 .footer-bottom{max-width:1200px;margin:0 auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;font-size:10px;color:#181818;flex-wrap:wrap;gap:8px}
 .social-links{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}
 .social-btn{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);color:#3a3a3a;padding:7px 12px;border-radius:50px;font-size:10px;font-weight:600;text-decoration:none;transition:all 0.3s;font-family:'Space Grotesk',sans-serif}
-.social-btn:hover{background:rgba(244,180,0,0.07);border-color:rgba(244,180,0,0.18);color:var(--y);transform:translateY(-1px)}
-.social-btn.wa{color:#25D366;border-color:rgba(37,211,102,0.1);background:rgba(37,211,102,0.02)}
-.social-btn.wa:hover{background:rgba(37,211,102,0.08);border-color:rgba(37,211,102,0.25)}
+.social-btn:hover{background:rgba(244,180,0,0.07);color:var(--y)}
+.social-btn.wa{color:#25D366;border-color:rgba(37,211,102,0.1)}
 .sparkle{position:fixed;pointer-events:none;z-index:9999;animation:spkl 1.1s ease-in-out forwards}
 @keyframes spkl{0%{transform:scale(0) rotate(0deg);opacity:1}50%{transform:scale(1) rotate(180deg);opacity:0.9}100%{transform:scale(0) rotate(360deg);opacity:0}}
 @media(max-width:900px){
-.navbar{top:0px;width:calc(100% - 18px);padding:10px 16px}
+.navbar{top:12px;left:16px;gap:12px}
+.nav-logo img{height:60px!important}
 .hero{padding:100px 20px 56px}
 .hero-content,.hero-info-inner,.comisiones-grid,.op-grid,.footer-inner{grid-template-columns:1fr}
 .benefits-grid,.premios-grid,.steps3,.ecuabet-grid{grid-template-columns:1fr}
@@ -194,224 +191,259 @@ footer{padding:32px 18px 24px}
 <body>
 <canvas id="particles"></canvas>
 <div class="star-container" id="stars"></div>
-<div class="modal-overlay" id="modal" onclick="closeModalOutside(event)">
-<div class="modal-box">
-<button class="modal-close" onclick="closeModal()">✕</button>
-<div class="modal-title" id="modal-title">SOLICITAR ACCESO</div>
-<div class="modal-sub" id="modal-sub">Completa tus datos y te contactamos de inmediato.</div>
-<div class="form-field"><label>Nombre completo *</label><input type="text" id="f-nombre" placeholder="Tu nombre completo"></div>
-<div class="form-field"><label>Ciudad *</label><input type="text" id="f-ciudad" placeholder="Tu ciudad"></div>
-<div class="form-field"><label>Teléfono *</label><input type="tel" id="f-tel" placeholder="09X XXX XXXX"></div>
-<div class="form-field"><label>Correo electrónico *</label><input type="email" id="f-email" placeholder="correo@ejemplo.com"></div>
-<div class="form-field"><label>Cédula de identidad</label><input type="text" id="f-cedula" placeholder="Tu número de cédula"></div>
-<div class="form-field"><label>Rol solicitado</label><input type="text" id="f-rol" readonly style="color:#F4B400;font-weight:700;cursor:default"></div>
-<button class="btn-wa-send" onclick="sendWA()">📲 ENVIAR POR WHATSAPP</button>
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title" id="modal-title">SOLICITAR ACCESO</div>
+    <div class="modal-sub" id="modal-sub">Completa tus datos y te contactamos de inmediato.</div>
+    <div class="form-field"><label>Nombre completo *</label><input type="text" id="f-nombre" placeholder="Tu nombre completo"></div>
+    <div class="form-field"><label>Ciudad *</label><input type="text" id="f-ciudad" placeholder="Tu ciudad"></div>
+    <div class="form-field"><label>Teléfono *</label><input type="tel" id="f-tel" placeholder="09X XXX XXXX"></div>
+    <div class="form-field"><label>Correo electrónico *</label><input type="email" id="f-email" placeholder="correo@ejemplo.com"></div>
+    <div class="form-field"><label>Cédula de identidad</label><input type="text" id="f-cedula" placeholder="Tu número de cédula"></div>
+    <div class="form-field"><label>Rol solicitado</label><input type="text" id="f-rol" readonly style="color:#F4B400;font-weight:700;cursor:default"></div>
+    <button class="btn-wa-send" onclick="sendWA()">📲 ENVIAR POR WHATSAPP</button>
+  </div>
 </div>
+<div class="modal-overlay" id="modal-recarga" onclick="if(event.target===this)closeRecarga()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeRecarga()">✕</button>
+    <div class="modal-title" style="color:#25D366">💳 RECARGA ECUABET</div>
+    <div class="modal-sub">Completa los datos y te atendemos de inmediato.</div>
+    <div class="form-field"><label>Nombre completo *</label><input type="text" id="r-nombre" placeholder="Tu nombre completo"></div>
+    <div class="form-field"><label>ID de cuenta EcuaBet *</label><input type="text" id="r-id" placeholder="Tu ID de EcuaBet"></div>
+    <div class="form-field"><label>Valor a recargar *</label><input type="number" id="r-valor" placeholder="Ej: 20"></div>
+    <button class="btn-wa-send" onclick="sendRecarga()">📲 ENVIAR POR WHATSAPP</button>
+  </div>
 </div>
 <nav class="navbar" id="navbar">
-<div class="nav-logo"><img src="logo-bingo.png" alt="Bingo"></div>
-
-<button class="nav-btn" onclick="openModal('Operador de Bingo','bingo')">UNIRME AHORA</button></nav>
+  <div class="nav-logo"><img src="logo-bingo.png" alt="Bingo"></div>
+  <button class="nav-btn" onclick="openModal('Operador de Bingo','bingo')">UNIRME AHORA</button>
+</nav>
 <section class="hero" id="inicio">
-<div class="hero-bg"></div>
-<div class="hero-shimmer"></div>
-<div class="hero-radial"></div>
-<div class="hero-grid"></div>
-<div class="hero-glow-r"></div>
-<div class="hero-content">
-<div>
-<div class="hero-tag">🇪🇨 PRIMERA PLATAFORMA 100% ECUATORIANA</div>
-<h1 class="hero-title"><span>¿ESTÁS</span><span>LISTO PARA</span><span>GENERAR</span><span>INGRESOS?</span></h1>
-<p class="hero-sub">Únete a la red más agresiva del mercado. Cupos de operadores limitados — actúa ahora.</p>
-<div class="hero-wa">
-<a href="https://wa.me/593981849712" target="_blank" class="wa-pill">📲 WhatsApp Bingo</a>
-<a href="https://wa.me/593988096489" target="_blank" class="wa-pill">📲 WhatsApp EcuaBet</a>
-</div>
-</div>
-<div class="hero-right">
-<div class="sdiv"><div class="sdiv-line"></div><div class="sdiv-text">BINGO RED DE AGENTES</div><div class="sdiv-line"></div></div>
-<button onclick="openModal('Operador de Bingo','bingo')" class="hero-btn"><span>🏆 &nbsp;Quiero ser operador de Bingo</span><span class="arr">→</span></button>
-<button onclick="openModal('Agente de Bingo','bingo')" class="hero-btn"><span>💼 &nbsp;Quiero ser agente de Bingo</span><span class="arr">→</span></button>
-<a href="https://bingo593.com.ec" target="_blank" class="hero-btn"><span>🎴 &nbsp;Crear cuenta en Bingo</span><span class="arr">↗</span></a>
-<div class="sdiv" style="margin-top:2px"><div class="sdiv-line"></div><div class="sdiv-text">ECUABET</div><div class="sdiv-line"></div></div>
-<a href="https://ecuabet.com/registro/aff/Z2lOeHVTRkhnWTh5QVExQTIrOGU3UT09" target="_blank" class="hero-btn wa-btn"><span>⚽ &nbsp;Crear cuenta en EcuaBet</span><span class="arr">↗</span></a>
-<button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="hero-btn"><span>📊 &nbsp;Quiero ser agente de EcuaBet</span><span class="arr">→</span></button>
-</div>
-</div>
-<div class="scroll-hint"><span class="scroll-hint-text">DESCUBRE MÁS</span><div class="scroll-arrow"></div></div>
+  <div class="hero-bg"></div>
+  <div class="hero-shimmer"></div>
+  <div class="hero-radial"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow-r"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-tag">🇪🇨 PRIMERA PLATAFORMA 100% ECUATORIANA</div>
+      <h1 class="hero-title"><span>¿ESTÁS</span><span>LISTO PARA</span><span>GENERAR</span><span>INGRESOS?</span></h1>
+      <p class="hero-sub">Únete a la red más agresiva del mercado. Cupos de operadores limitados — actúa ahora.</p>
+      <div class="hero-wa">
+        <a href="https://wa.me/593981849712" target="_blank" class="wa-pill">📲 WhatsApp Bingo</a>
+        <a href="https://wa.me/593988096489" target="_blank" class="wa-pill">📲 WhatsApp EcuaBet</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="sdiv"><div class="sdiv-line"></div><div class="sdiv-text">BINGO RED DE AGENTES</div><div class="sdiv-line"></div></div>
+      <button onclick="openModal('Operador de Bingo','bingo')" class="hero-btn"><span>🏆 &nbsp;Quiero ser operador de Bingo</span><span class="arr">→</span></button>
+      <button onclick="openModal('Agente de Bingo','bingo')" class="hero-btn"><span>💼 &nbsp;Quiero ser agente de Bingo</span><span class="arr">→</span></button>
+      <a href="https://bingo593.com.ec" target="_blank" class="hero-btn"><span>🎴 &nbsp;Crear cuenta en Bingo</span><span class="arr">↗</span></a>
+      <div class="sdiv" style="margin-top:2px"><div class="sdiv-line"></div><div class="sdiv-text">ECUABET</div><div class="sdiv-line"></div></div>
+      <a href="https://ecuabet.com/registro/aff/Z2lOeHVTRkhnWTh5QVExQTIrOGU3UT09" target="_blank" class="hero-btn wa-btn"><span>⚽ &nbsp;Crear cuenta en EcuaBet</span><span class="arr">↗</span></a>
+      <button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="hero-btn"><span>📊 &nbsp;Quiero ser agente de EcuaBet</span><span class="arr">→</span></button>
+      <button onclick="openRecarga()" class="hero-btn wa-btn"><span>💳 &nbsp;Quiero hacer una recarga de EcuaBet</span><span class="arr">→</span></button>
+    </div>
+  </div>
+  <div class="scroll-hint"><span class="scroll-hint-text">DESCUBRE MÁS</span><div class="scroll-arrow"></div></div>
 </section>
 <div class="stats-bar">
-<div class="stats-inner">
-<div class="stat-item"><div class="stat-num">+15.000</div><div class="stat-label">CARTOLAS VENDIDAS</div></div>
-<div class="stat-item"><div class="stat-num">+2.000</div><div class="stat-label">USUARIOS ACTIVOS</div></div>
-<div class="stat-item"><div class="stat-num">DOMINGOS</div><div class="stat-label">SORTEOS SEMANALES</div></div>
-<div class="stat-item"><div class="stat-num">50%</div><div class="stat-label">SE REPARTE EN COMISIONES</div></div>
-</div>
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">+15.000</div><div class="stat-label">CARTOLAS VENDIDAS</div></div>
+    <div class="stat-item"><div class="stat-num">+2.000</div><div class="stat-label">USUARIOS ACTIVOS</div></div>
+    <div class="stat-item"><div class="stat-num">DOMINGOS</div><div class="stat-label">SORTEOS SEMANALES</div></div>
+    <div class="stat-item"><div class="stat-num">50%</div><div class="stat-label">SE REPARTE EN COMISIONES</div></div>
+  </div>
 </div>
 <section class="hero-info">
-<div class="h2-glow"></div>
-<div class="h2-grid"></div>
-<div class="hero-info-inner">
-<div>
-<div class="hero-badge-dark">🎴 BINGO RED DE AGENTES</div>
-<h2 class="hero-title-dark">LA REVOLUCIÓN<br>DEL <span class="yellow">BINGO ONLINE</span><br>HA LLEGADO</h2>
-<p class="hero-sub-dark">Conviértete en operador, agente o jugador y genera ingresos cada semana desde nuestra plataforma.</p>
-<div class="hero-bullets">
-<div class="hero-bullet"><div class="bullet-dot"></div>Combos desde $1 USD — 4 cartolas por combo</div>
-<div class="hero-bullet"><div class="bullet-dot"></div>Más de $2.000 USD en premios todos los domingos</div>
-<div class="hero-bullet"><div class="bullet-dot"></div>Sorteos semanales garantizados</div>
-<div class="hero-bullet"><div class="bullet-dot"></div>Convierte tu celular en tu negocio</div>
-</div>
-</div>
-<div class="hero-cards">
-<div class="role-card"><div class="role-card-title">🏆 QUIERO SER OPERADOR</div><div class="role-card-desc">Construye tu propia red, lidera tu zona y gana por el volumen total de ventas.</div><div class="role-card-pct"><span class="pct-badge">10% ingreso pasivo</span><span class="pct-badge">50% se reparte</span></div><button class="btn-role" onclick="openModal('Operador de Bingo','bingo')">📋 Solicitar acceso</button></div>
-<div class="role-card"><div class="role-card-title">💼 QUIERO SER AGENTE</div><div class="role-card-desc">Vende cartolas, genera ingresos semanales desde tu celular.</div><div class="role-card-pct"><span class="pct-badge">40% comisión directa</span><span class="pct-badge">Pagos semanales</span></div><button class="btn-role" onclick="openModal('Agente de Bingo','bingo')">📋 Quiero ser agente</button></div>
-<div class="role-card"><div class="role-card-title">🎴 QUIERO JUGAR</div><div class="role-card-desc">Más de $2.000 en premios todos los domingos. Combos desde $1.</div><div class="role-card-pct"><span class="pct-badge">Combos desde $1</span><span class="pct-badge">+$2.000 en premios</span></div><a href="https://bingo593.com.ec" target="_blank" class="btn-role green">🎯 Crear cuenta gratis</a></div>
-</div>
-</div>
+  <div class="h2-glow"></div>
+  <div class="h2-grid"></div>
+  <div class="hero-info-inner">
+    <div>
+      <div class="hero-badge-dark">🎴 BINGO RED DE AGENTES</div>
+      <h2 class="hero-title-dark">LA REVOLUCIÓN<br>DEL <span class="yellow">BINGO ONLINE</span><br>HA LLEGADO</h2>
+      <p class="hero-sub-dark">Conviértete en operador, agente o jugador y genera ingresos cada semana desde nuestra plataforma.</p>
+      <div class="hero-bullets">
+        <div class="hero-bullet"><div class="bullet-dot"></div>Combos desde $1 USD — 4 cartolas por combo</div>
+        <div class="hero-bullet"><div class="bullet-dot"></div>Más de $2.000 USD en premios todos los domingos</div>
+        <div class="hero-bullet"><div class="bullet-dot"></div>Sorteos semanales garantizados</div>
+        <div class="hero-bullet"><div class="bullet-dot"></div>Convierte tu celular en tu negocio</div>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="role-card"><div class="role-card-title">🏆 QUIERO SER OPERADOR</div><div class="role-card-desc">Construye tu propia red, lidera tu zona y gana por el volumen total de ventas.</div><div class="role-card-pct"><span class="pct-badge">10% ingreso pasivo</span><span class="pct-badge">50% se reparte</span></div><button class="btn-role" onclick="openModal('Operador de Bingo','bingo')">📋 Solicitar acceso</button></div>
+      <div class="role-card"><div class="role-card-title">💼 QUIERO SER AGENTE</div><div class="role-card-desc">Vende cartolas, genera ingresos semanales desde tu celular.</div><div class="role-card-pct"><span class="pct-badge">40% comisión directa</span><span class="pct-badge">Pagos semanales</span></div><button class="btn-role" onclick="openModal('Agente de Bingo','bingo')">📋 Quiero ser agente</button></div>
+      <div class="role-card"><div class="role-card-title">🎴 QUIERO JUGAR</div><div class="role-card-desc">Más de $2.000 en premios todos los domingos. Combos desde $1.</div><div class="role-card-pct"><span class="pct-badge">Combos desde $1</span><span class="pct-badge">+$2.000 en premios</span></div><a href="https://bingo593.com.ec" target="_blank" class="btn-role green">🎯 Crear cuenta gratis</a></div>
+    </div>
+  </div>
 </section>
 <div id="comisiones" class="section-wrap">
-<div class="section-inner">
-<div class="comisiones-grid reveal">
-<div>
-<div class="section-tag">💰 ESTRUCTURA DE INGRESOS</div>
-<h2 class="section-title">LA ESTRUCTURA DE COMISIONES <span class="yellow">MÁS AGRESIVA</span></h2>
-<p style="font-size:13px;color:#4a4a4a;line-height:1.7;margin-bottom:16px">Repartimos el <strong style="color:#F4B400">50% de las ventas totales</strong> a nuestra fuerza comercial. Ese 50% se divide así:</p>
-<ul style="list-style:none;display:flex;flex-direction:column;gap:10px;font-size:12px;color:#555">
-<li style="display:flex;gap:9px"><span style="color:#F4B400;font-weight:700">▶</span>El <strong style="color:#fff">40%</strong> va para los agentes que venden las cartolas</li>
-<li style="display:flex;gap:9px"><span style="color:#F4B400;font-weight:700">▶</span>El <strong style="color:#fff">10%</strong> va para el operador master sobre todo lo que vende su red</li>
-<li style="display:flex;gap:9px"><span style="color:#F4B400;font-weight:700">▶</span>El otro <strong style="color:#fff">50%</strong> cubre los premios y la operación de la plataforma</li>
-</ul>
-</div>
-<div class="comision-items">
-<div class="comision-item"><div class="comision-pct">50%</div><div><div class="clabel">TOTAL QUE SE REPARTE</div><div class="cdesc">De cada $100 vendidos, $50 van directamente a la red comercial.</div></div></div>
-<div class="comision-item"><div class="comision-pct">40%</div><div><div class="clabel">COMISIÓN PARA AGENTES</div><div class="cdesc">Por cada cartola que vendas, recibes el 40% directo. Pagos semanales.</div></div></div>
-<div class="comision-item"><div class="comision-pct">10%</div><div><div class="clabel">INGRESO PASIVO — OPERADOR MASTER</div><div class="cdesc">Ganas el 10% de todo lo que vende tu equipo, semana a semana.</div></div></div>
-</div>
-</div>
-</div>
+  <div class="section-inner">
+    <div class="comisiones-grid reveal">
+      <div>
+        <div class="section-tag">💰 ESTRUCTURA DE INGRESOS</div>
+        <h2 class="section-title">LA ESTRUCTURA DE COMISIONES <span class="yellow">MÁS AGRESIVA</span></h2>
+        <p style="font-size:13px;color:#4a4a4a;line-height:1.7">Repartimos el <strong style="color:#F4B400">50% de las ventas totales</strong> directamente a nuestra red comercial. Pagos semanales garantizados.</p>
+      </div>
+      <div class="comision-items">
+        <div class="comision-item"><div class="comision-pct">50%</div><div><div class="clabel">TOTAL QUE SE REPARTE</div><div class="cdesc">De cada $100 vendidos, $50 van directamente a la red comercial.</div></div></div>
+        <div class="comision-item"><div class="comision-pct">40%</div><div><div class="clabel">COMISIÓN PARA AGENTES</div><div class="cdesc">Por cada cartola que vendas, recibes el 40% directo. Pagos semanales.</div></div></div>
+        <div class="comision-item"><div class="comision-pct">10%</div><div><div class="clabel">INGRESO PASIVO — OPERADOR MASTER</div><div class="cdesc">Ganas el 10% de todo lo que vende tu equipo, semana a semana.</div></div></div>
+      </div>
+    </div>
+  </div>
 </div>
 <div id="operador" class="section-wrap" style="padding-top:0">
-<div class="section-inner">
-<div class="section-tag reveal">👑 SOLO PARA LÍDERES — CUPOS LIMITADOS</div>
-<h2 class="section-title reveal" style="margin-bottom:22px">ESTRUCTURA <span class="yellow">OPERADOR MASTER</span></h2>
-<div class="op-box reveal">
-<div class="op-grid">
-<div>
-<p style="font-size:12px;color:#4a4a4a;margin-bottom:12px;line-height:1.7">Ser Operador Master no es para cualquiera. Es una oportunidad diseñada para personas con mentalidad emprendedora, ambición y enfoque en resultados.</p>
-<p style="font-size:12px;color:#F4B400;font-weight:600;margin-bottom:16px;line-height:1.6">AQUÍ NO BUSCAMOS EMPLEADOS.<br>BUSCAMOS LÍDERES QUE QUIERAN CONSTRUIR INGRESOS REALES.</p>
-<div class="section-tag" style="margin-bottom:10px">REQUISITOS</div>
-<div class="req-list">
-<div class="req-item"><div class="req-dot"></div>Cédula de identidad</div>
-<div class="req-item"><div class="req-dot"></div>Certificado bancario</div>
-<div class="req-item"><div class="req-dot"></div>Compromiso y liderazgo</div>
-</div>
-</div>
-<div>
-<div class="meta-box"><div class="meta-label">META SEMANAL</div><div class="meta-val">$150 USD en ventas</div><div class="meta-desc">Tu red debe generar $150 en ventas semanales.</div></div>
-<div class="meta-box"><div class="meta-label">¿CÓMO SE LOGRA?</div><div class="meta-val">5 agentes × $30</div><div class="meta-desc">Con 5 agentes, cada uno vendiendo $30 por semana.</div></div>
-<button onclick="openModal('Operador Master de Bingo','bingo')" class="btn-role" style="width:100%;justify-content:center;padding:13px">📋 Solicitar acceso Master</button>
-</div>
-</div>
-<div class="steps3">
-<div class="step3"><div class="step3-title">REGÍSTRATE</div><div class="step3-desc">Panel administrativo sin costo de inscripción.</div></div>
-<div class="step3"><div class="step3-title">ARMA TU EQUIPO</div><div class="step3-desc">Crea cuentas de agentes desde tu panel.</div></div>
-<div class="step3"><div class="step3-title">FACTURA</div><div class="step3-desc">Vende, escala y cobra comisiones seguro.</div></div>
-</div>
-</div>
-</div>
+  <div class="section-inner">
+    <div class="section-tag reveal">👑 SOLO PARA LÍDERES — CUPOS LIMITADOS</div>
+    <h2 class="section-title reveal" style="margin-bottom:22px">ESTRUCTURA <span class="yellow">OPERADOR MASTER</span></h2>
+    <div class="op-box reveal">
+      <div class="op-grid">
+        <div>
+          <p style="font-size:12px;color:#4a4a4a;margin-bottom:12px;line-height:1.7">Ser Operador Master no es para cualquiera. Es una oportunidad diseñada para personas con mentalidad emprendedora, ambición y enfoque en resultados.</p>
+          <p style="font-size:12px;color:#F4B400;font-weight:600;margin-bottom:16px;line-height:1.6">AQUÍ NO BUSCAMOS EMPLEADOS.<br>BUSCAMOS LÍDERES QUE QUIERAN CONSTRUIR INGRESOS REALES.</p>
+          <div class="section-tag" style="margin-bottom:10px">REQUISITOS</div>
+          <div class="req-list">
+            <div class="req-item"><div class="req-dot"></div>Cédula de identidad</div>
+            <div class="req-item"><div class="req-dot"></div>Certificado bancario</div>
+            <div class="req-item"><div class="req-dot"></div>Compromiso y liderazgo</div>
+          </div>
+        </div>
+        <div>
+          <div class="meta-box"><div class="meta-label">META SEMANAL</div><div class="meta-val">$150 USD en ventas</div><div class="meta-desc">Tu red debe generar $150 en ventas semanales.</div></div>
+          <div class="meta-box"><div class="meta-label">¿CÓMO SE LOGRA?</div><div class="meta-val">5 agentes × $30</div><div class="meta-desc">Con 5 agentes, cada uno vendiendo $30 por semana.</div></div>
+          <button onclick="openModal('Operador Master de Bingo','bingo')" class="btn-role" style="width:100%;justify-content:center;padding:13px">📋 Solicitar acceso Master</button>
+        </div>
+      </div>
+      <div class="steps3">
+        <div class="step3"><div class="step3-title">REGÍSTRATE</div><div class="step3-desc">Panel administrativo sin costo de inscripción.</div></div>
+        <div class="step3"><div class="step3-title">ARMA TU EQUIPO</div><div class="step3-desc">Crea cuentas de agentes desde tu panel.</div></div>
+        <div class="step3"><div class="step3-title">FACTURA</div><div class="step3-desc">Vende, escala y cobra comisiones seguro.</div></div>
+      </div>
+    </div>
+  </div>
 </div>
 <div id="beneficios" class="section-wrap" style="padding-top:0">
-<div class="section-inner reveal">
-<div class="section-tag">⚡ VENTAJAS REALES</div>
-<h2 class="section-title">¿POR QUÉ <span class="yellow">ELEGIRNOS?</span></h2>
-<div class="benefits-grid">
-<div class="benefit-col"><div class="benefit-col-title">🎴 PARA JUGADORES</div><div class="benefit-list"><div class="benefit-item"><span class="benefit-check">✓</span>Más de $2.000 en premios semanales</div><div class="benefit-item"><span class="benefit-check">✓</span>Juega desde tu celular</div><div class="benefit-item"><span class="benefit-check">✓</span>Sorteo en vivo todos los domingos</div><div class="benefit-item"><span class="benefit-check">✓</span>Combos desde $1 — 4 cartolas</div><div class="benefit-item"><span class="benefit-check">✓</span>Plataforma rápida y estable</div></div></div>
-<div class="benefit-col"><div class="benefit-col-title">💼 PARA AGENTES</div><div class="benefit-list"><div class="benefit-item"><span class="benefit-check">✓</span>40% comisión por venta</div><div class="benefit-item"><span class="benefit-check">✓</span>Pagos semanales puntuales</div><div class="benefit-item"><span class="benefit-check">✓</span>Trabajo 100% independiente</div><div class="benefit-item"><span class="benefit-check">✓</span>Panel de manejo propio</div><div class="benefit-item"><span class="benefit-check">✓</span>Sin inventario físico</div></div></div>
-<div class="benefit-col"><div class="benefit-col-title">🏆 PARA OPERADORES</div><div class="benefit-list"><div class="benefit-item"><span class="benefit-check">✓</span>10% pasivo sobre tu red</div><div class="benefit-item"><span class="benefit-check">✓</span>Zona exclusiva garantizada</div><div class="benefit-item"><span class="benefit-check">✓</span>Panel master de gestión</div><div class="benefit-item"><span class="benefit-check">✓</span>Ingresos por volumen</div><div class="benefit-item"><span class="benefit-check">✓</span>Expansión nacional</div></div></div>
-</div>
-</div>
+  <div class="section-inner reveal">
+    <div class="section-tag">⚡ VENTAJAS REALES</div>
+    <h2 class="section-title">¿POR QUÉ <span class="yellow">ELEGIRNOS?</span></h2>
+    <div class="benefits-grid">
+      <div class="benefit-col"><div class="benefit-col-title">🎴 PARA JUGADORES</div><div class="benefit-list"><div class="benefit-item"><span class="benefit-check">✓</span>Más de $2.000 en premios semanales</div><div class="benefit-item"><span class="benefit-check">✓</span>Juega desde tu celular</div><div class="benefit-item"><span class="benefit-check">✓</span>Sorteo en vivo todos los domingos</div><div class="benefit-item"><span class="benefit-check">✓</span>Combos desde $1 — 4 cartolas</div><div class="benefit-item"><span class="benefit-check">✓</span>Plataforma rápida y estable</div></div></div>
+      <div class="benefit-col"><div class="benefit-col-title">💼 PARA AGENTES</div><div class="benefit-list"><div class="benefit-item"><span class="benefit-check">✓</span>40% comisión por venta</div><div class="benefit-item"><span class="benefit-check">✓</span>Pagos semanales puntuales</div><div class="benefit-item"><span class="benefit-check">✓</span>Trabajo 100% independiente</div><div class="benefit-item"><span class="benefit-check">✓</span>Panel de manejo propio</div><div class="benefit-item"><span class="benefit-check">✓</span>Sin inventario físico</div></div></div>
+      <div class="benefit-col"><div class="benefit-col-title">🏆 PARA OPERADORES</div><div class="benefit-list"><div class="benefit-item"><span class="benefit-check">✓</span>10% pasivo sobre tu red</div><div class="benefit-item"><span class="benefit-check">✓</span>Zona exclusiva garantizada</div><div class="benefit-item"><span class="benefit-check">✓</span>Panel master de gestión</div><div class="benefit-item"><span class="benefit-check">✓</span>Ingresos por volumen</div><div class="benefit-item"><span class="benefit-check">✓</span>Expansión nacional</div></div></div>
+    </div>
+  </div>
 </div>
 <div id="premios" class="section-wrap" style="padding-top:0">
-<div class="section-inner reveal">
-<div class="section-tag">🏆 PREMIOS SEMANALES</div>
-<h2 class="section-title">MÁS DE <span class="yellow">$2.000 USD</span><br>EN PREMIOS TODOS LOS DOMINGOS</h2>
-<div class="premios-grid">
-<div class="premio-card"><div class="premio-icon">🏆</div><div class="premio-amount">+$2.000</div><div class="premio-title">GRAN PREMIO SEMANAL</div><div class="premio-desc">Con un combo de $1 (4 cartolas) puedes ganar más de $2.000 USD cada domingo.</div></div>
-<div class="premio-card"><div class="premio-icon">📅</div><div class="premio-amount" style="font-size:26px">CADA DOMINGO</div><div class="premio-title">SORTEO GARANTIZADO</div><div class="premio-desc">La plataforma cubre el 100% de los premios. Sin excusas, sin retrasos.</div></div>
-<div class="premio-card"><div class="premio-icon">📈</div><div class="premio-amount" style="font-size:26px">SIN TECHO</div><div class="premio-title">MÁS VENTAS = MÁS INGRESOS</div><div class="premio-desc">Tu red trabaja para ti 24/7. Cuanto más vendas, más ganas. Sin límite.</div></div>
-</div>
-</div>
+  <div class="section-inner reveal">
+    <div class="section-tag">🏆 PREMIOS SEMANALES</div>
+    <h2 class="section-title">MÁS DE <span class="yellow">$2.000 USD</span><br>EN PREMIOS TODOS LOS DOMINGOS</h2>
+    <div class="premios-grid">
+      <div class="premio-card"><div class="premio-icon">🏆</div><div class="premio-amount">+$2.000</div><div class="premio-title">GRAN PREMIO SEMANAL</div><div class="premio-desc">Con un combo de $1 (4 cartolas) puedes ganar más de $2.000 USD cada domingo.</div></div>
+      <div class="premio-card"><div class="premio-icon">📅</div><div class="premio-amount" style="font-size:26px">CADA DOMINGO</div><div class="premio-title">SORTEO GARANTIZADO</div><div class="premio-desc">La plataforma cubre el 100% de los premios. Sin excusas, sin retrasos.</div></div>
+      <div class="premio-card"><div class="premio-icon">📈</div><div class="premio-amount" style="font-size:26px">SIN TECHO</div><div class="premio-title">MÁS VENTAS = MÁS INGRESOS</div><div class="premio-desc">Tu red trabaja para ti 24/7. Sin límite.</div></div>
+    </div>
+  </div>
 </div>
 <div class="section-wrap" style="padding-top:0">
-<div class="section-inner reveal">
-<div class="section-tag">⚡ ADRENALINA PURA</div>
-<h2 class="section-title">LA MEJOR <span class="yellow">TECNOLOGÍA DE JUEGO</span></h2>
-<p style="color:#3a3a3a;font-size:13px;max-width:500px;line-height:1.7">No somos un bingo aburrido. Hemos recreado la emoción exacta del bingo de barrio en el celular.</p>
-<div class="tech-list">
-<div class="tech-item"><div class="tech-num">1</div><div class="tech-info"><h4>TENSIÓN REAL (MARCADO MANUAL)</h4><p>El jugador marca con su dedo sus cartolas. ¡Siente la adrenalina de estar a un número de ganar!</p></div></div>
-<div class="tech-item"><div class="tech-num">2</div><div class="tech-info"><h4>MODO "HIGH ROLLER" (AUTO-MARCADO)</h4><p>A partir de la cartola número 11, el sistema activa la asistencia automática.</p></div></div>
-<div class="tech-item"><div class="tech-num">3</div><div class="tech-info"><h4>TRANSMISIÓN EN VIVO INTEGRADA</h4><p>Toda la comunidad conectada en la misma pantalla generando un ambiente único.</p></div></div>
-<div class="tech-item"><div class="tech-num">4</div><div class="tech-info"><h4>CHAT EN VIVO + BINGO EN 2 MIN</h4><p>Si un jugador canta ¡BINGO!, tiene solo 2 minutos para reclamar su premio.</p></div></div>
-</div>
-</div>
+  <div class="section-inner reveal">
+    <div class="section-tag">⚡ ADRENALINA PURA</div>
+    <h2 class="section-title">LA MEJOR <span class="yellow">TECNOLOGÍA DE JUEGO</span></h2>
+    <div class="tech-list">
+      <div class="tech-item"><div class="tech-num">1</div><div class="tech-info"><h4>TENSIÓN REAL (MARCADO MANUAL)</h4><p>El jugador marca con su dedo sus cartolas. ¡Siente la adrenalina de estar a un número de ganar!</p></div></div>
+      <div class="tech-item"><div class="tech-num">2</div><div class="tech-info"><h4>MODO "HIGH ROLLER" (AUTO-MARCADO)</h4><p>A partir de la cartola número 11, el sistema activa la asistencia automática.</p></div></div>
+      <div class="tech-item"><div class="tech-num">3</div><div class="tech-info"><h4>TRANSMISIÓN EN VIVO INTEGRADA</h4><p>Toda la comunidad conectada en la misma pantalla generando un ambiente único.</p></div></div>
+      <div class="tech-item"><div class="tech-num">4</div><div class="tech-info"><h4>CHAT EN VIVO + BINGO EN 2 MIN</h4><p>Si un jugador canta ¡BINGO!, tiene solo 2 minutos para reclamar su premio.</p></div></div>
+    </div>
+  </div>
 </div>
 <div id="ecuabet" class="ecuabet-section">
-<div class="ecuabet-inner reveal">
-<div class="ecuabet-header">
-<div class="ecuabet-header-logos">
-<img src="logo-ecuabet1.png" alt="EcuaBet">
-<img src="logo-ecuabet2.png" alt="EcuaBet">
-</div>
-<div>
-<div class="section-tag">⚽ RED DE AGENTES BENDERAM — CASA #1 DEL ECUADOR</div>
-<h2 class="section-title" style="margin-bottom:5px">ECUABET — <span class="yellow">RED DE AGENTES</span></h2>
-<p style="color:#3a3a3a;font-size:13px;max-width:500px">Las mayores ganancias no están solo en hacer apuestas… sino en <strong style="color:#F4B400">administrar la plataforma.</strong></p>
-</div>
-</div>
-<div class="ecuabet-grid">
-<div class="ecuabet-card"><div class="ecuabet-icon">💼</div><div class="ecuabet-role">AGENTE</div><div class="ecuabet-desc">Genera ingresos diarios administrando tu cartera de clientes en la casa #1 del Ecuador.</div><div class="ecuabet-pcts"><div class="ecuabet-pct-item">Recargas: 3% de comisión</div><div class="ecuabet-pct-item">Pago notas retiro: 1%</div><div class="ecuabet-pct-item">Afiliados: 10%</div></div><button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="btn-role" style="width:100%;justify-content:center">📋 Quiero ser agente</button></div>
-<div class="ecuabet-card"><div class="ecuabet-icon">⚽</div><div class="ecuabet-role">USUARIO</div><div class="ecuabet-desc">Accede a la plataforma de apuestas más confiable del Ecuador. Registro 100% gratuito.</div><div class="ecuabet-pcts"><div class="ecuabet-pct-item">Registro 100% gratuito</div><div class="ecuabet-pct-item">Bono de bienvenida</div></div><a href="https://ecuabet.com/registro/aff/Z2lOeHVTRkhnWTh5QVExQTIrOGU3UT09" target="_blank" class="btn-role green" style="width:100%;justify-content:center">🎯 Crear cuenta</a></div>
-</div>
-</div>
+  <div class="ecuabet-inner reveal">
+    <div class="ecuabet-header">
+      <div class="ecuabet-header-logos">
+        <img src="logo-ecuabet1.png" alt="EcuaBet">
+        <img src="logo-ecuabet2.png" alt="EcuaBet">
+      </div>
+      <div>
+        <div class="section-tag">⚽ RED DE AGENTES BENDERAM — CASA #1 DEL ECUADOR</div>
+        <h2 class="section-title" style="margin-bottom:5px">ECUABET — <span class="yellow">RED DE AGENTES</span></h2>
+        <p style="color:#3a3a3a;font-size:13px;max-width:500px">Las mayores ganancias no están solo en hacer apuestas… sino en <strong style="color:#F4B400">administrar la plataforma.</strong></p>
+      </div>
+    </div>
+    <div class="ecuabet-grid">
+      <div class="ecuabet-card">
+        <div class="ecuabet-icon">💼</div>
+        <div class="ecuabet-role">AGENTE</div>
+        <div class="ecuabet-desc">Genera ingresos diarios administrando tu cartera de clientes en la casa #1 del Ecuador.</div>
+        <div class="ecuabet-pcts">
+          <div class="ecuabet-pct-item">Recargas: 3% de comisión</div>
+          <div class="ecuabet-pct-item">Pago notas retiro: 1%</div>
+          <div class="ecuabet-pct-item">Afiliados: 10%</div>
+        </div>
+        <div class="req-ecuabet">
+          <div class="req-ecuabet-title">REQUISITOS</div>
+          <div class="req-ecuabet-list">
+            <div class="req-ecuabet-item"><span class="req-ecuabet-check">✓</span>Foto de la cédula</div>
+            <div class="req-ecuabet-item"><span class="req-ecuabet-check">✓</span>Servicio básico (puede estar a otro nombre)</div>
+            <div class="req-ecuabet-item"><span class="req-ecuabet-check">✓</span>Certificado bancario (desde la app de tu banco)</div>
+            <div class="req-ecuabet-item"><span class="req-ecuabet-check">✓</span>RUC (actividad económica de comisionista)</div>
+          </div>
+        </div>
+        <button onclick="openModal('Agente de EcuaBet — Benderam','ecuabet')" class="btn-role" style="width:100%;justify-content:center;margin-bottom:8px">📋 Quiero ser agente</button>
+        <button onclick="openRecarga()" class="btn-role green" style="width:100%;justify-content:center">💳 Quiero hacer una recarga</button>
+      </div>
+      <div class="ecuabet-card">
+        <div class="ecuabet-icon">⚽</div>
+        <div class="ecuabet-role">USUARIO</div>
+        <div class="ecuabet-desc">Accede a la plataforma de apuestas más confiable del Ecuador. Registro 100% gratuito.</div>
+        <div class="ecuabet-pcts">
+          <div class="ecuabet-pct-item">Registro 100% gratuito</div>
+          <div class="ecuabet-pct-item">Bono de bienvenida</div>
+        </div>
+        <a href="https://ecuabet.com/registro/aff/Z2lOeHVTRkhnWTh5QVExQTIrOGU3UT09" target="_blank" class="btn-role green" style="width:100%;justify-content:center">🎯 Crear cuenta</a>
+      </div>
+    </div>
+  </div>
 </div>
 <footer>
-<div class="footer-inner">
-<div class="footer-brand">
-<div class="footer-brand-logos">
-<img src="logo-bingo.png" alt="Bingo">
-<div class="footer-logo-sep"></div>
-<img src="logo-ecuabet1.png" alt="EcuaBet">
-<img src="logo-ecuabet2.png" alt="EcuaBet">
-</div>
-<p>La primera plataforma de bingo virtual 100% ecuatoriana + EcuaBet, la casa de apuestas #1 del Ecuador.</p>
-<div class="social-links">
-<a href="https://www.instagram.com/bingo_ec/" target="_blank" class="social-btn">📸 Instagram</a>
-<a href="https://www.facebook.com/bingoecua" target="_blank" class="social-btn">👥 Facebook</a>
-<a href="https://wa.me/593981849712" target="_blank" class="social-btn wa">📲 WA Bingo</a>
-<a href="https://wa.me/593988096489" target="_blank" class="social-btn wa">📲 WA EcuaBet</a>
-</div>
-</div>
-<div class="footer-col">
-<h4>BINGO</h4>
-<a href="#inicio">Inicio</a>
-<a href="#comisiones">Comisiones</a>
-<a href="#operador">Operador Master</a>
-<a href="#premios">Premios</a>
-<a href="https://bingo593.com.ec" target="_blank">Jugar ahora →</a>
-</div>
-<div class="footer-col">
-<h4>ECUABET</h4>
-<a href="#ecuabet">Red de Agentes</a>
-<a href="https://ecuabet.com/registro/aff/Z2lOeHVTRkhnWTh5QVExQTIrOGU3UT09" target="_blank">Crear cuenta →</a>
-<a href="https://wa.me/593988096489" target="_blank">Contacto EcuaBet</a>
-<a href="#">Términos y condiciones</a>
-</div>
-</div>
-<div class="footer-bottom">
-<div>© 2026 Bingo Red de Agentes × EcuaBet. Todos los derechos reservados.</div>
-<a href="#" style="color:#181818;text-decoration:none">Términos y condiciones</a>
-</div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-logos">
+        <img src="logo-bingo.png" alt="Bingo">
+        <div class="footer-logo-sep"></div>
+        <img src="logo-ecuabet1.png" alt="EcuaBet">
+        <img src="logo-ecuabet2.png" alt="EcuaBet">
+      </div>
+      <p>La primera plataforma de bingo virtual 100% ecuatoriana + EcuaBet, la casa de apuestas #1 del Ecuador.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/bingo_ec/" target="_blank" class="social-btn">📸 Instagram</a>
+        <a href="https://www.facebook.com/bingoecua" target="_blank" class="social-btn">👥 Facebook</a>
+        <a href="https://wa.me/593981849712" target="_blank" class="social-btn wa">📲 WA Bingo</a>
+        <a href="https://wa.me/593988096489" target="_blank" class="social-btn wa">📲 WA EcuaBet</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>BINGO</h4>
+      <a href="#inicio">Inicio</a>
+      <a href="#comisiones">Comisiones</a>
+      <a href="#operador">Operador Master</a>
+      <a href="#premios">Premios</a>
+      <a href="https://bingo593.com.ec" target="_blank">Jugar ahora →</a>
+    </div>
+    <div class="footer-col">
+      <h4>ECUABET</h4>
+      <a href="#ecuabet">Red de Agentes</a>
+      <a href="https://ecuabet.com/registro/aff/Z2lOeHVTRkhnWTh5QVExQTIrOGU3UT09" target="_blank">Crear cuenta →</a>
+      <a href="https://wa.me/593988096489" target="_blank">Contacto EcuaBet</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Bingo Red de Agentes × EcuaBet. Todos los derechos reservados.</div>
+    <a href="#" style="color:#181818;text-decoration:none">Términos y condiciones</a>
+  </div>
 </footer>
 <script>
 var canvas=document.getElementById('particles');
@@ -429,13 +461,15 @@ document.addEventListener('click',function(e){var t=e.target;if(t.classList.cont
 var revs=document.querySelectorAll('.reveal');
 var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
 revs.forEach(function(r){obs.observe(r);});
-window.addEventListener('scroll',function(){var n=document.getElementById('navbar');});
+window.addEventListener('scroll',function(){var n=document.getElementById('navbar');if(window.scrollY>window.innerHeight-100){n.style.opacity='0';n.style.pointerEvents='none';}else{n.style.opacity='1';n.style.pointerEvents='auto';}});
 var cp='bingo';
 function openModal(rol,plataforma){cp=plataforma;['f-nombre','f-ciudad','f-tel','f-email','f-cedula'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('f-rol').value=rol;document.getElementById('modal-title').textContent=plataforma==='bingo'?'SOLICITUD — BINGO':'SOLICITUD — ECUABET';document.getElementById('modal-sub').textContent=plataforma==='bingo'?'Completa tus datos. Te contactamos por WhatsApp de inmediato.':'Completa tus datos para unirte a EcuaBet — Benderam.';document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';}
 function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
-function closeModalOutside(e){if(e.target===document.getElementById('modal'))closeModal();}
-function sendWA(){var n=document.getElementById('f-nombre').value.trim();var c=document.getElementById('f-ciudad').value.trim();var t=document.getElementById('f-tel').value.trim();var e=document.getElementById('f-email').value.trim();var ced=document.getElementById('f-cedula').value.trim();var rol=document.getElementById('f-rol').value;if(!n||!c||!t||!e){alert('Por favor completa todos los campos obligatorios.');return;}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){alert('Ingresa un correo válido.');return;}var msg='¡Hola! Quiero solicitar acceso como *'+rol+'*.\n\n👤 *Nombre:* '+n+'\n🏙️ *Ciudad:* '+c+'\n📱 *Teléfono:* '+t+'\n✉️ *Correo:* '+e+'\n'+(ced?'🪪 *Cédula:* '+ced+'\n':'')+'\\nAdjuntaré los documentos requeridos. ¡Quedo a la espera!';var num=cp==='bingo'?'593981849712':'593988096489';window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank');closeModal();}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+function sendWA(){var n=document.getElementById('f-nombre').value.trim();var c=document.getElementById('f-ciudad').value.trim();var t=document.getElementById('f-tel').value.trim();var e=document.getElementById('f-email').value.trim();var ced=document.getElementById('f-cedula').value.trim();var rol=document.getElementById('f-rol').value;if(!n||!c||!t||!e){alert('Por favor completa todos los campos obligatorios.');return;}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){alert('Ingresa un correo válido.');return;}var msg='Hola! Quiero solicitar acceso como *'+rol+'*.\n\n👤 *Nombre:* '+n+'\n🏙️ *Ciudad:* '+c+'\n📱 *Teléfono:* '+t+'\n✉️ *Correo:* '+e+'\n'+(ced?'🪪 *Cédula:* '+ced+'\n':'')+'Adjuntaré los documentos requeridos.';var num=cp==='bingo'?'593981849712':'593988096489';window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank');closeModal();}
+function openRecarga(){['r-nombre','r-id','r-valor'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('modal-recarga').classList.add('open');document.body.style.overflow='hidden';}
+function closeRecarga(){document.getElementById('modal-recarga').classList.remove('open');document.body.style.overflow='';}
+function sendRecarga(){var n=document.getElementById('r-nombre').value.trim();var id=document.getElementById('r-id').value.trim();var v=document.getElementById('r-valor').value.trim();if(!n||!id||!v){alert('Por favor completa todos los campos.');return;}var msg='💳 *RECARGA ECUABET*\n\n👤 *Nombre:* '+n+'\n🆔 *ID EcuaBet:* '+id+'\n💵 *Valor a recargar:* $'+v+'\n\nQuedo a la espera de confirmación!';window.open('https://wa.me/593968994305?text='+encodeURIComponent(msg),'_blank');closeRecarga();}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeRecarga();}});
 </script>
 </body>
 </html>
