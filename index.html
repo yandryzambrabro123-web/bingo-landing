@@ -191,6 +191,19 @@ footer{padding:32px 18px 24px}
 <body>
 <canvas id="particles"></canvas>
 <div class="star-container" id="stars"></div>
+
+<div class="modal-overlay" id="modal-mundial" onclick="if(event.target===this)closeMundial()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeMundial()">✕</button>
+    <div class="modal-title" style="color:#F4B400">🏆 CORONATE EN EL MUNDIAL 2026</div>
+    <div class="modal-sub">Gana vehiculos, efectivo y premios exclusivos por cada recarga.</div>
+    <div class="form-field"><label>Nombre completo *</label><input type="text" id="m-nombre" placeholder="Tu nombre completo"></div>
+    <div class="form-field"><label>Telefono *</label><input type="tel" id="m-tel" placeholder="09X XXX XXXX"></div>
+    <div class="form-field"><label>ID de cuenta EcuaBet *</label><input type="text" id="m-id" placeholder="Tu ID de EcuaBet"></div>
+    <div class="form-field"><label>Valor a recargar *</label><input type="number" id="m-valor" placeholder="Ej: 20"></div>
+    <button class="btn-wa-send" onclick="sendMundial()">📲 ENVIAR POR WHATSAPP</button>
+  </div>
+</div>
 <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -498,6 +511,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal(
 function openMundial(){['m-nombre','m-tel','m-id','m-valor'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('modal-mundial').classList.add('open');document.body.style.overflow='hidden';}
 function closeMundial(){document.getElementById('modal-mundial').classList.remove('open');document.body.style.overflow='';}
 function sendMundial(){var n=document.getElementById('m-nombre').value.trim();var t=document.getElementById('m-tel').value.trim();var id=document.getElementById('m-id').value.trim();var v=document.getElementById('m-valor').value.trim();if(!n||!t||!id||!v){alert('Por favor completa todos los campos.');return;}var msg='\u{1F3C6} *MUNDIAL 2026 — BENDERAM x ECUABET*\n\n👤 *Nombre:* '+n+'\n📱 *Teléfono:* '+t+'\n🆔 *ID EcuaBet:* '+id+'\n💵 *Valor a recargar:* $'+v+'\n\nQuiero participar por los premios del Mundial!';window.open('https://wa.me/593968994305?text='+encodeURIComponent(msg),'_blank');closeMundial();}
+
+function openMundial(){["m-nombre","m-tel","m-id","m-valor"].forEach(function(id){document.getElementById(id).value="";});document.getElementById("modal-mundial").classList.add("open");document.body.style.overflow="hidden";}
+function closeMundial(){document.getElementById("modal-mundial").classList.remove("open");document.body.style.overflow="";}
+function sendMundial(){var n=document.getElementById("m-nombre").value.trim();var t=document.getElementById("m-tel").value.trim();var id=document.getElementById("m-id").value.trim();var v=document.getElementById("m-valor").value.trim();if(!n||!t||!id||!v){alert("Por favor completa todos los campos.");return;}var msg="MUNDIAL 2026 BENDERAM x ECUABET\n\nNombre: "+n+"\nTelefono: "+t+"\nID EcuaBet: "+id+"\nValor: $"+v+"\nQuiero participar!";window.open("https://wa.me/593968994305?text="+encodeURIComponent(msg),"_blank");closeMundial();}
 </script>
 </body>
 </html>
