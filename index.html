@@ -494,6 +494,10 @@ function openRecarga(){['r-nombre','r-id','r-valor'].forEach(function(id){docume
 function closeRecarga(){document.getElementById('modal-recarga').classList.remove('open');document.body.style.overflow='';}
 function sendRecarga(){var n=document.getElementById('r-nombre').value.trim();var id=document.getElementById('r-id').value.trim();var v=document.getElementById('r-valor').value.trim();if(!n||!id||!v){alert('Por favor completa todos los campos.');return;}var msg='💳 *RECARGA ECUABET*\n\n👤 *Nombre:* '+n+'\n🆔 *ID EcuaBet:* '+id+'\n💵 *Valor a recargar:* $'+v+'\n\nQuedo a la espera de confirmación!';window.open('https://wa.me/593968994305?text='+encodeURIComponent(msg),'_blank');closeRecarga();}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeRecarga();}});
+
+function openMundial(){['m-nombre','m-tel','m-id','m-valor'].forEach(function(id){document.getElementById(id).value='';});document.getElementById('modal-mundial').classList.add('open');document.body.style.overflow='hidden';}
+function closeMundial(){document.getElementById('modal-mundial').classList.remove('open');document.body.style.overflow='';}
+function sendMundial(){var n=document.getElementById('m-nombre').value.trim();var t=document.getElementById('m-tel').value.trim();var id=document.getElementById('m-id').value.trim();var v=document.getElementById('m-valor').value.trim();if(!n||!t||!id||!v){alert('Por favor completa todos los campos.');return;}var msg='\u{1F3C6} *MUNDIAL 2026 — BENDERAM x ECUABET*\n\n👤 *Nombre:* '+n+'\n📱 *Teléfono:* '+t+'\n🆔 *ID EcuaBet:* '+id+'\n💵 *Valor a recargar:* $'+v+'\n\nQuiero participar por los premios del Mundial!';window.open('https://wa.me/593968994305?text='+encodeURIComponent(msg),'_blank');closeMundial();}
 </script>
 </body>
 </html>
